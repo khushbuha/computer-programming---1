@@ -1,12 +1,15 @@
 include <stdio.h>
 
 int main() {
-    int i;
+    int i, sum = 0;
 
-    printf("First 10 even numbers are:\n");
-    for(i = 2; i <= 20; i += 2) {
-        printf("%d ", i);
+    for(i = 1; i <= 100; i++) {
+        if(i % 13 == 0) {
+            sum += i;
+        }
     }
+
+    printf("Sum of all numbers divisible by 13 (1 to 100) = %d\n", sum);
 
     return 0;
 }
